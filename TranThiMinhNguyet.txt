@@ -1,0 +1,83 @@
+Bai 1: 
+public class Bai1 {
+    public static void main(String args[]){
+        int a=9, b=5, c=11;
+        int max=a;
+        if (b> max)
+           max=b;
+        if (c >max)
+            max=c;
+        System.out.print("so lon nhat la: "+ max);
+    }
+}
+
+----------
+Bai 2:
+public class Bai2 {
+    public static void main(String args[]){
+        int a=12, b=15, c=11;
+        if (a>b ){
+            if (a>c)
+                System.out.print ("Gia tri lon nhat la : " +a);
+            else 
+                 System.out.print ("Gia tri lon nhat la : " +c);
+        }
+            
+        else{
+            if (b>c)
+                System.out.print ("Gia tri lon nhat la : " +b);
+            else 
+                 System.out.print ("Gia tri lon nhat la : " +c);
+        }
+    }
+}
+----------
+Bai 3:
+import static java.lang.Math.sqrt;
+
+public class Bai3 {
+    public static void main(String args[]){
+        int a=9, b=5, c=11;
+        float delta= b*b-4*a*c;
+        if (a==0){
+            if(b==0)
+                System.out.print("Phuong trinh vo nghiem");
+            else 
+                System.out.print("Nghien la x= "+ -c/b);
+        }
+        else{
+            if (delta==0)
+                System.out.print("nghien la x= "+ -b/(2*a));
+            else if (delta> 0)
+                System.out.print("nghien la x1= "+ (-b+sqrt(delta))/(2*a) + "x2= " + (-b-sqrt(delta))/(2*a));
+            else 
+                System.out.print("Phuowng trinh vo nghiem");
+        }
+        
+    }
+}
+--------------
+Bai 4:
+public class For {
+    public static void main(String args[]){
+        int[] a= {10,5,10,21,12,17};
+        int max= a[0];
+        int min= a[0];
+        int maxind=0, minind=0;
+
+        for(int i=0;i< a.length ;i++){
+            if(a[i]> max){
+                max= a[i];
+                maxind=i;
+            }
+
+            if(a[i]< min){
+                min= a[i];
+                minind=i;
+            }
+        }
+        System.out.println("max= "+max + " maxind= "+ maxind);
+        System.out.println("min= "+min + " minind= "+ minind);
+    }
+}
+

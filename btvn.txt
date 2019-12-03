@@ -1,0 +1,90 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package period1;
+
+/**
+ *
+ * @author LA-AM
+ */
+public class Period1 {
+    public static int[] addX(int n , int arr[], int x){
+        int i; 
+        // create a new array of size n+1 
+        int newarr[] = new int[n + 1]; 
+        for (i = 0; i < n; i++) 
+            newarr[i] = arr[i]; 
+        newarr[n] = x; 
+        return newarr; 
+       }
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+       
+       int [] A={1,5, 10, 7, 12, 17,5 ,17};
+       int max = A[0];
+       int min = A[0];
+       int minIdx[] = {};
+       int maxIdx[] = {};
+       System.out.println("Max = ");
+       int d = 0;
+        for (int i = 0; i < A.length; i++) {
+            if(A[i] > max)
+            {
+                max = A[i];
+            }    
+            if(A[i] < min)
+            {
+                min = A[i];
+            }  
+        }
+        System.out.println("max="+max);
+        System.out.println("min="+min);
+
+        for(int i = 0; i < A.length; i ++){
+            if(A[i] == min){
+                minIdx = addX(minIdx.length, minIdx , i);
+            }
+            if(A[i] == max)
+            {
+                maxIdx = addX(maxIdx.length, minIdx , i);
+            }
+        }
+        
+        System.out.println(minIdx[0]);
+        System.out.println("max="+max + ", vtri="+maxIdx[0]);
+        System.out.println("min"+min+ ", vtri="+minIdx[0]);
+        int [] A1={1,5, 10, 7, 12, 14};
+        int [] A2={1,5, 10, 1, 12, 17, 6, 17};
+        for (int i = 0; i < A1.length; i++) {
+            if(A[i] > max)
+            {
+                max = A[i];
+            }    
+            if(A[i] < min)
+            {
+                min = A[i];
+            }  
+        }
+        for(int i = 0; i < A.length; i ++){
+            if(A[i] == min){
+                minIdx = addX(minIdx.length, minIdx , i);
+            }
+            if(A[i] == max)
+            {
+                maxIdx = addX(maxIdx.length, minIdx , i);
+            }
+        }
+        System.out.println("Max="+max + "vtri="+maxIdx[0]);
+        System.out.println("Max="+max +", cac vtri=");
+        for (int i = 0; i < A2.length; i++) {
+            
+        }
+        
+    }
+    
+}

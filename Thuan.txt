@@ -1,0 +1,26 @@
+public class TimMaxMin {
+
+	public static void main(String[] args) {
+		int[] A = { 1, 5, 10, 0, 12, 17 };
+		int min = A[0];
+		int max = A[0];
+	
+		int vtri = 0;
+		int vtrimax=0;
+		for (int i = 0; i < A.length; i++) {
+			
+			if (A[i] < min) {
+				min = A[i];
+				vtri = i;
+			}
+			if(A[i]>max) {
+				max=A[i];
+				vtrimax=i;
+			}
+		}
+		System.out.println("Max= " + max + ",vTri= " + vtrimax);
+		System.out.println("Min= " + min + ",vTri= " + vtri);
+
+	}
+
+}
